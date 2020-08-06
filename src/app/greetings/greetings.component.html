@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    Enter your name:<input [(ngModel)]=Name name='nm' />
+    <button type='submit' (click)='show()'>Submit</button>
+    </form>
+    <p>
+        <span>{{value}}</span><span>{{ Name}}</span>
+    </p>
+</body>
+</html>

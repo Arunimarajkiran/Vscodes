@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="radio" ng-model="rb" value="valid"/>valid
+    <input type="radio" ng-model="rb" value="Invalid"/>Invalid
+    </form>
+    <!--<div *ngIf='rb'>
+        <b>Your data is valid</b>
+    </div>
+
+    <div *ngIf='rb'>
+        <b>Your data is invalid</b>
+    </div>-->
+    <div *ng-Switch="rb">
+        <div *ngSwitch when="valid">
+            <h1>valid</h1>
+        </div>
+        <div *ngSwitch when="Invalid">
+            <h1>Invalid</h1>
+        </div>
+    </div>
+    <div *ngFor='let c of cities'>
+        <p>{{c}}</p>
+    </div>
+</body>
+</html>
